@@ -1,8 +1,5 @@
 package com.telegram.bot;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
 import org.telegram.telegrambots.longpolling.util.LongPollingSingleThreadUpdateConsumer;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -12,7 +9,6 @@ import org.telegram.telegrambots.meta.generics.TelegramClient;
 
 public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
   private final TelegramClient telegramClient;
-  private final Map<String, DTOBotUser> users = new HashMap<String, DTOBotUser>();
 
   public EchoBot (String botToken) {
     telegramClient = new OkHttpTelegramClient(botToken);
@@ -27,19 +23,6 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
       String firstName = update.getMessage().getChat().getFirstName();
       String lastName = update.getMessage().getChat().getLastName();
       String username = update.getMessage().getChat().getUserName();
-      String userId = update.getMessage().getChat().getId().toString();
-
-      if (!users.containsKey(userId)) {
-        DTOBotUser currentUser = new DTOBotUser();
-
-        currentUser
-          .setId(userId)
-          .setFirstName(firstName)
-          .setLastName(lastName)
-          .setUsername(username);
-
-        users.put(userId, currentUser);
-      }
 
       if (update.getMessage().getText().equals("/dicas")) {
         message = SendMessage // Create a message object
