@@ -2,7 +2,4 @@ name: telegram-bot
 
 services:
   telegram-bot:
-    image: telegram-bot
     build: ${PWD}
-    environment:
-      TELEGRAM_BOT_TOKEN: "6914222572:AAFU9hseS6tCllA7LccU_klJ4bx02O6XfBA"
