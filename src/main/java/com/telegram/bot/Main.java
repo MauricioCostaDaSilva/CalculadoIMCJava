@@ -8,11 +8,11 @@ public class Main {
     // Using try-with-resources to allow auto close to run upon finishing
     try (TelegramBotsLongPollingApplication botsApplication = new TelegramBotsLongPollingApplication()) {
       botsApplication.registerBot(botToken, new EchoBot(botToken));
-      System.out.println("MyAmazingBot successfully started!");
+      System.out.println("Bot do Telegram iniciado com sucesso!");
       // Ensure this prcess wait forever
       Thread.currentThread().join();
-    } catch (Exception e) {
-      e.printStackTrace();
+    } catch (Exception error) {
+      error.printStackTrace();
     }
   }
 }
