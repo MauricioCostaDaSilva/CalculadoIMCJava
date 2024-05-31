@@ -2,8 +2,8 @@ name: telegram-bot
 
 services:
   telegram-bot:
-    build: ${PWD}
     restart: always
+    build: ./
     develop:
       watch:
         - path: ./src

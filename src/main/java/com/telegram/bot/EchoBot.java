@@ -14,16 +14,16 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
   }
 
   @Override
-  public void consumir (Update update) {
+  public void consume (Update update) {
     if (update.hasMessage() && update.getMessage().hasText()) {
       SendMessage message = null;
       long chatId = update.getMessage().getChatId();
-      String primeiroNome = update.getMessage().getChat().getprimeiroNome();
-      String sobreNome = update.getMessage().getChat().getsobreNome();
-      String nomeDeUsuario = update.getMessage().getChat().getnomeDeUsuario();
+      String primeiroNome = update.getMessage().getChat().getFirstName();
+      String sobreNome = update.getMessage().getChat().getLastName();
+      String nomeDeUsuario = update.getMessage().getChat().getUserName();
 
       if (update.getMessage().getText().equals("/dicas")) {
-        message = SendMessage 
+        message = SendMessage
             .builder()
             .chatId(chatId)
             .text(
