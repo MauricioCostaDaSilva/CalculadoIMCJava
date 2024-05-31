@@ -1,0 +1,12 @@
+name: telegram-bot
+
+services:
+  telegram-bot:
+    restart: always
+    build: ./
+    develop:
+      watch:
+        - path: ./src
+          action: rebuild
+        - path: ./pom.xml
+          action: rebuild
