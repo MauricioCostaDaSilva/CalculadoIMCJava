@@ -175,7 +175,7 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
       }
 
       try {
-        telegramClient.execute(message);  Enviando nosso objeto de mensagem ao usuário
+        telegramClient.execute(message);  //Enviando nosso objeto de mensagem ao usuário
       } catch (TelegramApiException e) {
         e.printStackTrace();
       }
