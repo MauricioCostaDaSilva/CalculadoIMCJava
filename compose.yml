@@ -3,3 +3,10 @@ name: telegram-bot
 services:
   telegram-bot:
     build: ${PWD}
+    restart: always
+    develop:
+      watch:
+        - path: ./src
+          action: rebuild
+        - path: ./pom.xml
+          action: rebuild
