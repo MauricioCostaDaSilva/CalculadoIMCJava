@@ -61,7 +61,7 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
         String classificacao;
 
         if (imc < 18.5) {
-          classificacao = "Abaixo do peso /n Aumente a Ingestão Calórica: Consuma mais calorias do que você queima.\r\n" + //
+          classificacao = "Abaixo do peso \n Aumente a Ingestão Calórica: Consuma mais calorias do que você queima.\r\n" + //
                         "Isso significa aumentar o consumo de alimentos ricos em calorias, como\r\n" + //
                         "gorduras saudáveis, carboidratos complexos e proteínas magras.\r\n" + //
                         "\r\n" + //
@@ -86,13 +86,13 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
                         "Monitore-se Regularmente: Pese-se regularmente e fique atento a sinais de ganho de peso. Isso pode ajudá-lo a identificar problemas precocemente e fazer ajustes na sua rotina, se necessário.\r\n" + //
                         "";
         } else if (imc < 29.9) {
-          classificacao = "Sobrepeso /n Controle de Porções: Fique atento ao tamanho das porções e evite comer em excesso. Use pratos menores, preste atenção às suas sensações de fome e saciedade e pare de comer quando estiver satisfeito, não quando estiver completamente cheio.\r\n" + //
+          classificacao = "Sobrepeso \n Controle de Porções: Fique atento ao tamanho das porções e evite comer em excesso. Use pratos menores, preste atenção às suas sensações de fome e saciedade e pare de comer quando estiver satisfeito, não quando estiver completamente cheio.\r\n" + //
                         "Alimentação Equilibrada: Priorize uma alimentação balanceada, rica em frutas, vegetais, proteínas magras e grãos integrais.\r\n" + //
                         "Atividade Física Regular: Faça exercícios regularmente, incluindo atividades aeróbicas (como caminhada, corrida, natação, ciclismo) e exercícios de fortalecimento muscular.\r\n" + //
                         "Reduza o Sedentarismo: Além do exercício planejado, procure maneiras de ser mais ativo no dia a dia, como subir escadas em vez de usar o elevador, estacionar mais longe do destino para caminhar mais, e fazer pausas para se movimentar durante o trabalho.\r\n" + //
                         "";
         } else if (imc < 34.9) {
-          classificacao = "Obesidade grau 1 /n Alimentação saudável: Concentre-se em uma dieta rica em vegetais, frutas, grãos \r\n" + //
+          classificacao = "Obesidade grau 1 \n Alimentação saudável: Concentre-se em uma dieta rica em vegetais, frutas, grãos \r\n" + //
                         "integrais e proteínas magras.\r\n" + //
                         "Controle de porções: A quantidade de comida que você consome é tão importante \r\n" + //
                         "quanto a qualidade. Tente comer porções menores e preste atenção às suas sensações \r\n" + //
@@ -111,7 +111,7 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
                         "fundamental para o sucesso a longo prazo na perda de peso e na manutenção de\r\n" + //
                         "hábitos saudáveis";
         } else if (imc < 39.9) {
-          classificacao = "Obesidade grau 2 /n Consulte um profissional de saúde: Antes de iniciar qualquer programa de perda de \r\n" + //
+          classificacao = "Obesidade grau 2 \n Consulte um profissional de saúde: Antes de iniciar qualquer programa de perda de \r\n" + //
                         "peso, é importante consultar um médico ou um nutricionista\r\n" + //
                         "Estabeleça metas realistas: Defina metas de perda de peso alcançáveis e mensuráveis. \r\n" + //
                         "Ao definir metas realistas, você será mais propenso a manter-se motivado e \r\n" + //
@@ -130,7 +130,7 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
                         "Seja consistente e paciente: Seja paciente consigo mesmo e esteja preparado para \r\n" + //
                         "enfrentar desafios ao longo do caminho.";
         } else {
-          classificacao = "Obesidade grau 3 /n Consulte um Profissional de Saúde: O primeiro passo é consultar um médico ou um \r\n" + //
+          classificacao = "Obesidade grau 3 \n Consulte um Profissional de Saúde: O primeiro passo é consultar um médico ou um \r\n" + //
                         "nutricionista para avaliar sua situação de saúde e criar um plano personalizado para \r\n" + //
                         "perda de peso.\r\n" + //
                         "Mudanças na Alimentação: Adote uma alimentação equilibrada e nutritiva, rica em \r\n" + //
