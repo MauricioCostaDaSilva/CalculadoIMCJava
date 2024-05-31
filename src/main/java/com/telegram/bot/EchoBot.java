@@ -159,8 +159,7 @@ public class EchoBot implements LongPollingSingleThreadUpdateConsumer {
             .chatId(chatId)
             .text(
               "Seu IMC é: " + imc + "\n" +
-              "Classificação: " + classificacao +
-              "Consuma: " + qAgua + "Litros"
+              "Classificação: " + classificacao
             )
             .build();
       } else if (message == null) {
