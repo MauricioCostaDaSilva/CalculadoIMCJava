@@ -1,5 +1,11 @@
 # CalculadoraIMC
 
+## Como executar localmente
+
+````sh
+docker compose up -d
+````
+
 ## Explicação do que foi feito
 
 ### Arquivo `Main.java`
